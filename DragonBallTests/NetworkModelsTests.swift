@@ -115,6 +115,7 @@ class NetworkModelTests: XCTestCase {
         var retrievedToken: String?
 
         //Given
+        urlSessionMock.error = nil
         urlSessionMock.data = "TokenString".data(using: .utf8)!
         urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
         
@@ -180,46 +181,46 @@ class NetworkModelTests: XCTestCase {
 //    }
     
     func testGetHerosSuccess() {
-      var error: NetworkError?
-      var retrievedHeroes: [Hero]?
-      
-      //Given
-      sut.token = "testToken"
-      urlSessionMock.data = getHeroesData(resourceName: "heroes")
-      urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
-      
-      //When
-      sut.getHeroes { heroes, networkError in
-        error = networkError
-        retrievedHeroes = heroes
-      }
-      
-      //Then
-      XCTAssertEqual(retrievedHeroes?.first?.id, "Hero ID", "should be the same hero as in the json file")
-      XCTAssertNil(error, "there should be no error")
+        var error: NetworkError?
+        var retrievedHeroes: [Hero]?
+        
+        //Given
+        sut.token = "testToken"
+        urlSessionMock.data = getHeroesData(resourceName: "heroes")
+        urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        //When
+        sut.getHeroes { heroes, networkError in
+            error = networkError
+            retrievedHeroes = heroes
+        }
+        
+        //Then
+        XCTAssertEqual(retrievedHeroes?.first?.id, "Hero ID", "should be the same hero as in the json file")
+        XCTAssertNil(error, "there should be no error")
     }
     
     func testGetHerosSuccessWithNoHeroes() {
-      var error: NetworkError?
-      var retrievedHeroes: [Hero]?
-      
-      //Given
-      sut.token = "testToken"
-      urlSessionMock.data = getHeroesData(resourceName: "noHeroes")
-      urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
-      
-      //When
-      sut.getHeroes { heroes, networkError in
-        error = networkError
-        retrievedHeroes = heroes
-      }
-      
-      //Then
-      XCTAssertNotNil(retrievedHeroes)
-      XCTAssertEqual(retrievedHeroes?.count, 0)
-      XCTAssertNil(error, "there should be no error")
+        var error: NetworkError?
+        var retrievedHeroes: [Hero]?
+        
+        //Given
+        sut.token = "testToken"
+        urlSessionMock.data = getHeroesData(resourceName: "noHeroes")
+        urlSessionMock.response = HTTPURLResponse(url: URL(string: "http")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+        
+        //When
+        sut.getHeroes { heroes, networkError in
+            error = networkError
+            retrievedHeroes = heroes
+        }
+        
+        //Then
+        XCTAssertNotNil(retrievedHeroes)
+        XCTAssertEqual(retrievedHeroes?.count, 0)
+        XCTAssertNil(error, "there should be no error")
     }
-  }
+}
 
 extension NetworkModelTests {
     func getHeroesData(resourceName: String) -> Data? {
@@ -233,4 +234,4 @@ extension NetworkModelTests {
         }
         return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
     }
-  }
+}

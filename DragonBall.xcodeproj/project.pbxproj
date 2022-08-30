@@ -26,7 +26,7 @@
 		23A837B128ACDF9B00751353 /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A837B028ACDF9B00751353 /* LocalDataModel.swift */; };
 		23F0302528BCE0E500495FED /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F0302428BCE0E500495FED /* URLSessionMock.swift */; };
 		23F0302728BD14EC00495FED /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 23F0302628BD14EB00495FED /* heroes.json */; };
-		23F0302928BD1E1100495FED /* noheroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 23F0302828BD1E1100495FED /* noheroes.json */; };
+		23F0302928BD1E1100495FED /* noHeroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 23F0302828BD1E1100495FED /* noHeroes.json */; };
 		23FB00DD2890344100E415A1 /* HeroesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FB00DC2890344100E415A1 /* HeroesTableViewController.swift */; };
 		23FB00E02890350D00E415A1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FB00DE2890350D00E415A1 /* TableViewCell.swift */; };
 		23FB00E12890350D00E415A1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB00DF2890350D00E415A1 /* TableViewCell.xib */; };
@@ -67,7 +67,7 @@
 		23A837B028ACDF9B00751353 /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		23F0302428BCE0E500495FED /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		23F0302628BD14EB00495FED /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
-		23F0302828BD1E1100495FED /* noheroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noheroes.json; sourceTree = "<group>"; };
+		23F0302828BD1E1100495FED /* noHeroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHeroes.json; sourceTree = "<group>"; };
 		23FB00DC2890344100E415A1 /* HeroesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewController.swift; sourceTree = "<group>"; };
 		23FB00DE2890350D00E415A1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		23FB00DF2890350D00E415A1 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				23F0302628BD14EB00495FED /* heroes.json */,
-				23F0302828BD1E1100495FED /* noheroes.json */,
+				23F0302828BD1E1100495FED /* noHeroes.json */,
 				23A0EE8328B79A460028AAC9 /* LocalDataModelTests.swift */,
 				231E5B95288E80E2002CDCEF /* NetworkModelsTests.swift */,
 				23F0302428BCE0E500495FED /* URLSessionMock.swift */,
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F0302928BD1E1100495FED /* noheroes.json in Resources */,
+				23F0302928BD1E1100495FED /* noHeroes.json in Resources */,
 				23F0302728BD14EC00495FED /* heroes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

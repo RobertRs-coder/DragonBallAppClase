@@ -58,7 +58,8 @@ class NetworkModel {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
-        // Creamos la tarea de llamada con la session
+        
+        // Creamos la tarea de llamada con la session antes URLSession.shared
         let task = session.dataTask(with: urlRequest) { data, response, error in
             // Comprobamos que el error sea nil
             guard error == nil else{
