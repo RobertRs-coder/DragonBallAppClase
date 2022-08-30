@@ -115,7 +115,7 @@ class NetworkModel {
         urlRequest.httpBody = try? JSONEncoder().encode(body)
         
         
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+        let task = session.dataTask(with: urlRequest) { data, response, error in
             // Comprobamos que el error sea nil
             guard error == nil else{
                 completion([], .otherError)
