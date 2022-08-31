@@ -8,7 +8,7 @@
 import UIKit
 
 private enum Constants {
-    static normalImageHeight = 200.0
+    static let normalImageHeight = 200.0
 }
 
 class DetailViewController: UIViewController {
@@ -50,7 +50,8 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let correctedOffset = scrollView.contentOffset.y + 92.0
+        // El safeArea varia entre dispositivos
+        let correctedOffset = scrollView.contentOffset.y + view.safeAreaInsets.top
         imageHeight.constant = Constants.normalImageHeight - correctedOffset
     }
 }
