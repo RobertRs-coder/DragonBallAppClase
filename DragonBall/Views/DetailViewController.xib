@@ -11,9 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DragonBall" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionTextView" destination="at5-wW-Gmq" id="9f5-ZE-abW"/>
+                <outlet property="imageHeight" destination="yij-7C-clX" id="iUQ-Xb-NSg"/>
                 <outlet property="imageView" destination="n78-zy-FDQ" id="lzG-Ck-YCr"/>
                 <outlet property="nameLabel" destination="p2K-ke-NEJ" id="KTt-ie-0Zk"/>
-                <outlet property="scrollView" destination="h3j-tb-931" id="MFO-iI-36k"/>
+                <outlet property="scrollView" destination="h3j-tb-931" id="Xjf-hd-iMd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
