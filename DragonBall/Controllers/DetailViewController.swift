@@ -7,6 +7,10 @@
 
 import UIKit
 
+private enum Constants {
+    static normalImageHeight = 200.0
+}
+
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -46,6 +50,7 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset)
+        let correctedOffset = scrollView.contentOffset.y + 92.0
+        imageHeight.constant = Constants.normalImageHeight - correctedOffset
     }
 }
