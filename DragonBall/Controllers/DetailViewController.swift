@@ -21,6 +21,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        scrollView.delegate = self
+        
         guard let hero = hero else {
             return
         }
@@ -37,5 +40,12 @@ class DetailViewController: UIViewController {
     
     func set(model: Hero) {
         hero = model
+    }
+}
+
+
+extension DetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset)
     }
 }
