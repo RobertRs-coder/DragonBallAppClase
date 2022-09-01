@@ -16,6 +16,8 @@
 		231E5B88288E80E2002CDCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 231E5B87288E80E2002CDCEF /* Assets.xcassets */; };
 		231E5B8B288E80E2002CDCEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231E5B89288E80E2002CDCEF /* LaunchScreen.storyboard */; };
 		231E5B96288E80E2002CDCEF /* NetworkModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E5B95288E80E2002CDCEF /* NetworkModelsTests.swift */; };
+		2330156B28C020C700784B4F /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330156928C020C700784B4F /* SecondTableViewCell.swift */; };
+		2330156C28C020C700784B4F /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2330156A28C020C700784B4F /* SecondTableViewCell.xib */; };
 		2376C7EA28ACEB47002E4C68 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376C7E928ACEB47002E4C68 /* SettingsViewController.swift */; };
 		23916B1428A40DF900345ACB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23916B1228A40DF900345ACB /* CollectionViewCell.swift */; };
 		23916B1528A40DF900345ACB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23916B1328A40DF900345ACB /* CollectionViewCell.xib */; };
@@ -57,6 +59,8 @@
 		231E5B8C288E80E2002CDCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		231E5B91288E80E2002CDCEF /* DragonBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E5B95288E80E2002CDCEF /* NetworkModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelsTests.swift; sourceTree = "<group>"; };
+		2330156928C020C700784B4F /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		2330156A28C020C700784B4F /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 		2376C7E928ACEB47002E4C68 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23916B1228A40DF900345ACB /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		23916B1328A40DF900345ACB /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 			children = (
 				23FB00DF2890350D00E415A1 /* TableViewCell.xib */,
 				23FB00DE2890350D00E415A1 /* TableViewCell.swift */,
+				2330156A28C020C700784B4F /* SecondTableViewCell.xib */,
+				2330156928C020C700784B4F /* SecondTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				23FB00E12890350D00E415A1 /* TableViewCell.xib in Resources */,
 				23916B1528A40DF900345ACB /* CollectionViewCell.xib in Resources */,
 				23FB00E62890479800E415A1 /* DetailViewController.xib in Resources */,
+				2330156C28C020C700784B4F /* SecondTableViewCell.xib in Resources */,
 				231E5B88288E80E2002CDCEF /* Assets.xcassets in Resources */,
 				231E5B86288E80E1002CDCEF /* Main.storyboard in Resources */,
 			);
@@ -316,6 +323,7 @@
 				231E5B81288E80E1002CDCEF /* SceneDelegate.swift in Sources */,
 				230349CF2892E82B00A68CBA /* UIImageViewExtension.swift in Sources */,
 				2376C7EA28ACEB47002E4C68 /* SettingsViewController.swift in Sources */,
+				2330156B28C020C700784B4F /* SecondTableViewCell.swift in Sources */,
 				23FB00DD2890344100E415A1 /* HeroesTableViewController.swift in Sources */,
 				23A28CB428BC4026002231CD /* UIViewControllerExtension.swift in Sources */,
 				23916B1728A4127900345ACB /* CollectionViewController.swift in Sources */,

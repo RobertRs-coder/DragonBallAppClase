@@ -16,6 +16,8 @@ class HeroesTableViewController: UITableViewController {
 
         tableView?.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "reuseIdentifier")
         
+        tableView?.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "cell2")
+        
         
         guard let token = LocalDataModel.getToken() else {return}
         // Network call
@@ -33,18 +35,37 @@ class HeroesTableViewController: UITableViewController {
         }
     }
 
-
+    
+    
     // Uncomment and give cell with identifier
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TableViewCell else{
-            return UITableViewCell()
-        }
-
-//         Configure the cell...
-//        cell.heroName.text = heroes[indexPath.row].name
-        cell.set(model: heroes[indexPath.row])
         
-        return cell
+        if indexPath.row % 2 == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as? TableViewCell else{
+                return UITableViewCell()
+            }
+            // Configure the cell
+            cell.set(model: heroes[indexPath.row])
+            
+            return cell
+            
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as? SecondTableViewCell else{
+                let cell = UITableViewCell()
+                
+                var content = cell.defaultContentConfiguration()
+                content.text = "Title"
+                cell.contentConfiguration = content
+                
+                return UITableViewCell()
+                
+                
+                
+            }
+
+            cell.label.text = heroes[indexPath.row].name
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
