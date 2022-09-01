@@ -64,6 +64,9 @@ class HeroesTableViewController: UITableViewController {
             }
 
             cell.label.text = heroes[indexPath.row].name
+            cell.label2.text = heroes[indexPath.row].description
+
+            
             return cell
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 class SecondTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
     
     
     override func awakeFromNib() {

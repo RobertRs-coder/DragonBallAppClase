@@ -16,23 +16,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICg-I2-LYV">
+                        <rect key="frame" x="278.5" y="12" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCq-Se-PoM">
-                        <rect key="frame" x="139" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="20" y="11.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yCq-Se-PoM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OKr-fN-Qqc"/>
-                    <constraint firstItem="yCq-Se-PoM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ocz-Yt-O41"/>
+                    <constraint firstItem="yCq-Se-PoM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cjj-6Q-XKL"/>
+                    <constraint firstItem="ICg-I2-LYV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="OFf-Hy-3vh"/>
+                    <constraint firstItem="yCq-Se-PoM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QwK-Xn-zrJ"/>
+                    <constraint firstItem="ICg-I2-LYV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="w5z-YI-dQv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="yCq-Se-PoM" id="brm-PQ-0PH"/>
+                <outlet property="label2" destination="ICg-I2-LYV" id="h2u-lG-WFR"/>
             </connections>
-            <point key="canvasLocation" x="132" y="107"/>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </tableViewCell>
     </objects>
 </document>
